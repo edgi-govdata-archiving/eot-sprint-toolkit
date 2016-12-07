@@ -1,0 +1,2 @@
+* Introduction
+Placeholder for an eventual toolkit for EOT2016 archiving sprints/hackathons.  
