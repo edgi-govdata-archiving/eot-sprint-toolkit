@@ -49,10 +49,3 @@ Moreover, it's not yet clear which datasets are vulnerable. Some are stored on [
 *** Thanks
 To @patcon, @dcwalk, @mackenzien, and others at [[http://civictech.ca][Civic Tech TO]], as well as Michelle Murphy, Patrick Kielty, Alessandro Delfanti, and many others.  
 
-*** Notes
-
-- step one should be reahing out to the EPA and justasking for the actual data.  That is probably the best thing to do.  
-
-templates for writing to your regional office.
-
-joint force effort between someone knwhoknows something about how the PEA works, and someone who knows how the data is likely to be structured. 
