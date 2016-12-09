@@ -8,6 +8,9 @@ The End of Term archive webcrawl has run in [[http://eotarchive.cdlib.org/search
 
 The archiving project thus takes on even greater urgency than it ordinarily would.  We hope that, by identifying and capturing key resources, we can make a real difference in the fight to save science and the environment.
 
+** Contributing
+This repository should house both *code* developed for the sprint & hackathon events, and *explanations* that clarify the use of those tools.  For now, we're asking that you contribute your work by forking the repo, adding your code and its documentation (this can be a patch to the current file or a separate tool manual), and submitting a pull request.  If you aren't sure what all this means please contact [[matt.price@utoronto.ca][Matt]] directly and he'll help you out.  
+
 ** How it works, and scope of our efforts
 
 The End of Term archiving project is a broad, slow walk through the entire ~.gov~ [[https://en.wikipedia.org/wiki/Top-level_domain][top-level domain]].  It uses an [[https://webarchive.jira.com/wiki/display/Heritrix/Heritrix][open-source webcrawling program]] to visit and archive as many web pages as possible across the whole domain.  However, there are a *lot* of government websites in the US, and many of them are extremely complex.  On its own, the webcrawler will not be able to penetrate deeply into the largest of these sites.
@@ -31,18 +34,25 @@ This process is technically straightforward but requires some web research skill
 
 We are taking the [[https://nepis.epa.gov/EPA/html/pubs/pubtitle.html][E.P.A. publications list]] as an initial test of this process.  That link goes to a full listing, by title, of all EPA publications currently available on line.  Crawling this space will take a long time but is technically trivial.  However, we lose all metadata by crawling in this way.  The [[https://www.epa.gov/nscep][search page]] here gives one more piece of data -- the year of publication -- which is not much, is actually fairly useful for people who want to make use of them.  What is the best way for us to collect and preserve that metadata? 
 
-Another, slightly less transparent store of documents is the collection of [[https://cdxnodengn.epa.gov/cdx-enepa-public/action/eis/search][Environmental Impact Statements]].  
+Another, slightly less transparent store of documents is the collection of [[https://cdxnodengn.epa.gov/cdx-enepa-public/action/eis/search][Environmental Impact Statements]]. We haven't found a full listing of all of these documents, and the search interface is a little more complex, so perhaps more difficult to scrape, but also permitting the retention of more of the metadata.  
+
+A third set of documents is actually embedded in a more data-driven interface (so it's sort of a transition to the next category), at the [[https://echo.epa.gov/][Enforcement and Compliance History]] repository.  What would it take to recover this data? 
+
+**** Tools
+We've been looking at [[https://scrapy.org/][Scrapy]] and its GUI builder, [[https://scrapy.org/][Portia]], as building blocks for our scraping efforts. However, we haven't settled either on a format for any metadata we can collect nor a good way to ingetrate it directly with the Internet Archive's broader webcrawling project.  
+
 *** Quantitative Datasets: Finding, filtering, Downloading, and Archiving Them
+the EPA hosts many datasets large and small. A good number of them are online at [[https://www3.epa.gov/enviro/][Envirofacts]]. Infoormation about Envirofacts and other API's is also [[https://www3.epa.gov/enviro/][available online]].  Many of these  datasets can also be [[http://gis.epa.ie/GetData/Download][Downloaded from EPA]], but the download links are sent via email.  It should be possible to automate this process using a combination of a scraper and a mail API like [[https://www.mailgun.com/][Mailgun]] or [[https://sendgrid.com/][Sendgrid]].  The question of short term storage (for acquisition), and especially of *long-term archiving*, remains unsolved.  
+
+Moreover, it's not yet clear which datasets are vulnerable. Some are stored on [[http://data.gov][data.gov]], and others may be unlikely to catch the attention of the incoming administration, who are probably most focussed on climate change research and environmental assessments.  Colleagues at Penn are working on a survey of scientists, social scientists, and public servants, which whould help us to set priorities.
+
+*** Thanks
+To @patcon, @dcwalk, @mackenzien, and others at [[http://civictech.ca][Civic Tech TO]], as well as Michelle Murphy, Patrick Kielty, Alessandro Delfanti, and many others.  
+
 *** Notes
 
 - step one should be reahing out to the EPA and justasking for the actual data.  That is probably the best thing to do.  
 
 templates for writing to your regional office.
 
-joint force effort between someone knwhoknows something about how the PEA works, and someone who knows how the data is likely to be structured.  
-
-
-
-
-
-
+joint force effort between someone knwhoknows something about how the PEA works, and someone who knows how the data is likely to be structured. 
