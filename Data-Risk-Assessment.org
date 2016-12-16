@@ -1,0 +1,13 @@
+** Dataset Risk Assessment
+There is so much government data on the web, it will be very difficult to capture and archive all of it; so we need to /prioritize/ our efforts. We do this with a simple matrix based on *vulnerability* and *value* of the dataset.
+
+- Vulnerability :: How likely is this dataset to disappear from the web, based on what we know about (a) the Trump Administration's priorities, (b) recorded statements from Trump, the transition team, and the incoming cabinet, and (c) previous experience in the US, Canada, and other countries?
+- Value :: How important is this data to the future of environmental governance and environmental science? Even if it doesn't seem particularly vulnerable, would its loss be a major blow to research or to policy?
+
+Part of today's work will be *getting a better grasp* of these criteria, and *starting the process* of categorizing the datasets.
+*** Example
+Let's add an example assessment, or something about the process you have planned.  
+
+
+
+
