@@ -43,7 +43,15 @@ EIS are a high-value document source, but it looks like they will also be retrie
 - *Code:* A crawler/scraper that can crawl through the interface and capture as much information as possible, including metadata.  As the IA is unlikely to capture this info, we should ALSO attempt to store all results as WARC files which can be passed on to the IA
 
 ** Priority
-This is *high priority data* which the IA will *likely not be able to attain*, so this is a *high priority for us.  However, it's harder than the first two. 
+This is *high priority data* which the IA will *likely not be able to attain*, so this is a *high priority for us.  However, it's harder than the first two.
+
+* FTP Crawling 
+Many of the publications and datasets published online by the EPA are served over FTP, [[- FTP crawling: http://cdiac.ornl.gov/data_catalog.html#][e.g., as seen here]]. Can we retrieve these?
+** Deliverables
+- *Code:* A proof-of-concept FTP crawler for this dataset
+- *Text:* Assessment: guide for other collaborators dealing with the same problem
+** Priority
+Michelle, suggestions?  
 
 * Server Offer Assessment Team
 We have received many offers of server space donations, and many suggestions about the appropriate way to store this data (e.g., different protocols, mirroring strategies, etc.). If anyone has subsnatial skills in this area the librarian team could use your help developing a set of options for server strategizing, and criteria for each option.  

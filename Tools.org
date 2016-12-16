@@ -1,0 +1,6 @@
+This is just a list of the tools we're using and creating
+* Chrome Extension
+
+The EOT project has a simple bookmarklet for nominating "seeds" for their webcrawler; you can [[http://digital2.library.unt.edu/nomination/eth2016/about/][read about it here]]. For our event we derived a [[https://github.com/CivicTechTO/presidential-harvest-nomination-tool][Chrome Extension]], and would recommend its use to future groups.
+* Scrapers
+We expectto use [[https://scrapy.org/][the scrapy Python library]] and maybe its GUI companion [[https://scrapinghub.com/portia/][portia]] for this work.  

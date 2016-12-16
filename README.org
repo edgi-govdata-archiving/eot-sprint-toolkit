@@ -48,18 +48,3 @@ Moreover, it's not yet clear which datasets are vulnerable. Some are stored on [
 
 *** Thanks
 To @patcon, @dcwalk, @mackenzien, and others at [[http://civictech.ca][Civic Tech TO]], as well as Michelle Murphy, Patrick Kielty, Alessandro Delfanti, and many others.
-* List
-- OET Archive:
-  - https://github.com/end-of-term/eot2016
-- Bookmarklet: http://digital2.library.unt.edu/nomination/eth2016/about/
-  - double-duty? 
-- Google sheets automator:
-- FTP crawling: http://cdiac.ornl.gov/data_catalog.html#
-- Other Document Repositories:
-  - https://edg.epa.gov/metadata/catalog/search/browse/browse.page
-  - https://cdxnodengn.epa.gov/cdx-enepa-public/action/eis/search
-- *Brainstorming about* (but not yet acting on) quantitattive dataset downloads.
--
-* New, Improved Bookmarklet.  
-
-The EOT project has a simple bookmarklet for nominating "seeds" for their webcrawler; you can [[http://digital2.library.unt.edu/nomination/eth2016/about/][read about it here]]. For our archiving project we also wanted to be able to keep track of what we acocmplished on the day.  So we got @michlle & e@... to help us out.
