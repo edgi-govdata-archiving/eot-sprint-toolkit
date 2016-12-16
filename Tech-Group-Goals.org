@@ -18,10 +18,32 @@ In each heading, describe the goal and the desired deliverables. List in priorit
 * Workflow & Scripts for the EPA Publications Collection
 It now looks like the IA will harvest all of the EPA *Publications* ([[https://nepis.epa.gov/EPA/html/pubs/pubtitle.html][listed here]])   through the regular webcrawling process.  The webcrawler will *not* retrieve metadata, but that metadata is recorded in extracted textfiles and possibly in PDF's as well.  
 
+Anujan Murugesu has written [[https://github.com/AnujanM/EPADocument-Scraper/blob/master/EPA%20DocID%20Creator.py][a code snippet]] that will do most of the work:
+#+BEGIN_SRC python
+import re
+import requests
+
+docpattern = re.compile("(Dockey=)((\w)*)")
+docFile = open("docKey.txt", 'w')
+linkFile = open("links.txt", 'w')
+
+dataSite = requests.get("https://nepis.epa.gov/EPA/html/pubs/pubtitle.html").text
+matches = docpattern.findall(dataSite)
+for match in matches:
+    a = match[1]
+    fileLink = "https://nepis.epa.gov/Exe/ZyPDF.cgi/" +a + ".PDF?Dockey=" + a + ".pdf"
+    docFile.write(a)
+    linkFile.write(fileLink)
+    linkFile.write("\n")
+    docFile.write("\n")
+docFile.close()
+linkFile.close()
+#+END_SRC
+
 ** Deliverables
 
 - *Verification:* do the PDF's themselves contain metadata?
-- *Code:* write a scraper/crawler that can extract metadata from text & PDF files and save them to a simple DB for the use of future researchers.
+- *Code:* write a scraper/crawler that can extract metadata from text & PDF files and save them to a simple DB for the use of future researchers. (mostly done already!)
 
 ** Priority
 The document collection is very high priority but the IA will almost certainly scrape this by themselves. Flagging this collection as worthwhile and rendering it useful by developing a database are *extrmeely important*, but not *time sensitive*.
