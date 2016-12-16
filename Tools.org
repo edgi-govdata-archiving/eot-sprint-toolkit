@@ -1,4 +1,6 @@
 This is just a list of the tools we're using and creating
+* Communication and Collaboration
+We've been collaborating via [[http://www.slack.com][Slack]] and [[http://github.com][Github]]. If you're not already familiar with these tools, and have time to check them out, please do so!
 * Chrome Extension
 
 The EOT project has a simple bookmarklet for nominating "seeds" for their webcrawler; you can [[http://digital2.library.unt.edu/nomination/eth2016/about/][read about it here]]. For our event we derived a [[https://github.com/CivicTechTO/presidential-harvest-nomination-tool][Chrome Extension]], and would recommend its use to future groups.
