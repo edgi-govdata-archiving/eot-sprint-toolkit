@@ -3,7 +3,7 @@
 #+OPTIONS: date:t e:t email:nil f:t inline:t num:nil p:nil pri:nil
 #+OPTIONS: prop:nil stat:t tags:t tasks:t tex:t timestamp:t title:t
 #+OPTIONS: toc:nil todo:t |:t
-#+TITLE: Tech Group Goals for Dec. 17, 2016 Guerlla Archiving
+#+TITLE: Tech Group Goals for Dec. 17, 2016 Guerilla Archiving
 #+DATE: <2016-12-16 Fri>
 #+AUTHOR: Matt Price
 #+EMAIL: matt.price@utoronto.ca
