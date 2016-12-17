@@ -1,16 +1,9 @@
 # Part 2: Scraper
 
-## Getting started
+This takes in a csv (i.e. `eis-sample-page-1.csv`) with a unique ID of each EIS page, and outputs a JSON with the metadata and PDF links.
 
-To get started, run
-
-```
-npm install
-node index.js
-```
-
-This scrapes an example file, such as [this link](https://cdxnodengn.epa.gov/cdx-enepa-II/public/action/eis/details?eisId=222951), and outputs a JSON like this:
-
+For example, if one of the links in the CSV document includes [this link](https://cdxnodengn.epa.gov/cdx-enepa-II/public/act
+ion/eis/details?eisId=222951) with ID `222951`, then it will output this metadata JSON called `output/page-metadata-222951.json`:
 
 ```js
 {
@@ -71,3 +64,17 @@ This scrapes an example file, such as [this link](https://cdxnodengn.epa.gov/cdx
 }
 
 ```
+
+## Getting started
+
+To get started, run
+
+```sh
+# navigate to the epa-eis-collection directory
+cd epa-eis-collection/2-scraper
+# install node modules
+npm install
+# start the scraper
+npm start
+```
+

@@ -1,3 +1,11 @@
+# Part 2: Scraper
+
+This takes in a csv (i.e. `../1-EIS-ID/eis-listing.csv`) with a unique ID of each EIS page, and outputs a JSON with the metadata and PDF links.
+
+For example, if one of the links in the CSV document includes [this link](https://cdxnodengn.epa.gov/cdx-enepa-II/public/act
+ion/eis/details?eisId=222951) with ID `222951`, then it will output this metadata JSON called `output/page-metadata-222951.json`:
+
+```js
 {
   "metaData": {
     "EIS Title": " Nexus Gas Transmission Project and Texas Eastern Appalachian Lease Project",
@@ -54,3 +62,19 @@
     "pdf-filename": "10 Appendix R Part 4.pdf"
   } ]
 }
+
+```
+
+## Getting started
+
+To get started, run
+
+```sh
+# navigate to the epa-eis-collection directory
+cd epa-eis-collection/2-scraper
+# install node modules
+npm install
+# start the scraper
+npm start
+```
+

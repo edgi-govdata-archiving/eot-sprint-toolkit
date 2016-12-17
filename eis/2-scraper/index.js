@@ -3,7 +3,7 @@ var cheerio = require( 'cheerio' );
 var fs = require( 'fs' );
 var Converter = require( "csvtojson" ).Converter;
 var converter = new Converter( {} );
-var CSV_FILENAME = "eis-sample-page-1.csv"
+var CSV_FILENAME = "../1-EIS-ID/eis-listing.csv"
 
 var pageData = {
   metaData: {
