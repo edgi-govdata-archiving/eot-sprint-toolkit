@@ -5,24 +5,56 @@ Created on Sat Dec 17 11:18:10 2016
 @authors: madeleine bonsma, adrian d'alessandro
 
 Description: This script uses EIS report IDs from a csv version 
-of the EIS database (link below) to access the metadata for each 
+of the EIS database to access the metadata for each 
 EIS report, scrape it, and save as one csv for the entire database. 
 
-Database: https://cdxnodengn.epa.gov/cdx-enepa-II/public/action/eis/search/search#results
-CSV with ids: https://gist.github.com/wdenton/7d4b9d064d2881cca7dbf8c743f306a8
+EIS report database: https://cdxnodengn.epa.gov/cdx-enepa-II/public/action/eis/search/search#results
+Sample CSV with EIS url IDs: https://gist.github.com/wdenton/7d4b9d064d2881cca7dbf8c743f306a8
+Or: https://github.com/titaniumbones/eot-sprint-toolkit/blob/master/eis/1-EIS-ID/eis-listing.csv
 
-Usage: python EISmetadataParser.py <inputcsv> <output_filename>
-Example usage: python EISmetadataParser.py eis-sample-page-1.csv metadata.csv
+---------
 
-Note: the input csv should have the EIS IDs (found at the end of each EIS url) as the first column.  
+Usage: python EISmetadataParser.py <path-to-inputcsv> <output_filename>
+Example usage: python EISmetadataParser.py eis-listing.csv metadata.csv
+
+---------
+
+Installing Python:
+- download and install Anaconda for your operating system (Python 3 is recommended) at this link:
+ https://www.continuum.io/downloads
+Anaconda contains Python, many common Python libraries, an IDE (Spyder)
+and a command prompt (conda prompt).
+
+Python libraries required:
+- csv
+- os
+- sys
+- urllib3
+- BeautifulSoup
+
+If any libraries are missing, run the following in the command prompt:
+ pip install <libraryname>
+ Example: pip install BeautifulSoup
+ 
+Note: if using Windows, you'll need to use something other than the regular Windows command prompt. 
+I recommend using conda prompt, included if you used Anaconda to get Python, or Git Bash.
+
+Running this script:
+1. open conda prompt
+2. type this command: python EISmetadataParser.py <path-to-inputcsv> <output_filename>
+Example command: python EISmetadataParser.py 1-EIS-ID/eis-listing.csv metadata.csv
+
+Note: the input csv should have the EIS IDs (found at the end of each EIS url) as the first column. 
+This will become the first column of the output csv as well.
 
 TO DO:
  - check if there are more or less header categories on a page than expected, if there are, return a warning
  - check if a row is already in the csv before adding it again
- - add link to pdf(s)
+ - add column(s) in csv with link to pdf(s) in EIS report 
  - figure out how to do https securely?
 
 """
+
 import csv
 import os.path
 import sys
