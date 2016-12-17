@@ -2,6 +2,8 @@
 
 The purpose of this toolkit is to help small groups of citizen-hackers join in the [[http://eotarchive.cdlib.org/2016.html][End of Term Web Archive 2016]], a collaborative project hosted by the Internet Archive, California Digital Library, and others.  As concerned citizens, we can use our expertise to fill gaps in the archive and ensure that government data stay archived, open, and usable by the public.  We've written this document to keep track of what we're doing and help other groups with similar aims to ours.
 
+[[./Tech-Group-Goals.org][IF YOU JUST WANT TO GET TO WORK, CLICK HERE TO GO TO THE EVENT GOALS PAGE!]] If you're looking for more context, keep reading. 
+
 ** Why are we doing this?
 
 The End of Term archive webcrawl has run in [[http://eotarchive.cdlib.org/search?f1-administration=2008][previous]] [[http://eotarchive.cdlib.org/search?f1-administration=2012][election years]], and is a non-partisan historical archiving project of great independent value.  However, this year's effort has attracted [[http://www.nytimes.com/2016/12/01/nyregion/harvesting-government-history-one-web-page-at-a-time.html?_r=0][widespread attention]] because of the extreme changes expected with the inauguration of Donald Trump in January.  [[https://technoscienceunit.wordpress.com/2016/12/04/guerrilla-archiving-event-saving-environmental-data-from-trump/][Our perspective]] draws particularly on Canadian experiences under the previous government, which [[http://www.academicmatters.ca/2013/05/harpers-attack-on-science-no-science-no-evidence-no-truth-no-democracy/][greatly restricted access to scientific data]] that conflicted with its policies, and in some cases [[http://www.cbc.ca/news/technology/high-arctic-research-station-forced-to-close-1.1171728][shut down data collection programs]] rather than confront their results. The incoming US administration has already announced its intention to dismantle a number of government programs and agencies.  The [[http://www.nytimes.com/2016/12/07/us/politics/scott-pruitt-epa-trump.html][E.P.A. and climate change research]] are high on the list.
@@ -24,7 +26,7 @@ For now, we see our objectives as the following:
 - *developing recipes* for reverse-engineering URL's of database-stored documents, and potentially *adding metadata* to archived PDF files located in this way
 - *locating* non-document-centric datasets (that is, databases collecting large sets of quantitative data instead of texts), *assessing* whether they are in danger of disappearing, and *developing methods* to retrieve and archive the information
 
-So there are three categories of preserveation work here; let's discuss them in turn. 
+So there are three categories of preservation work here; let's discuss them in turn. 
 
 *** Deep Web Pages: Nominating Seeds
 

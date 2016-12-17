@@ -75,7 +75,7 @@ Many of the publications and datasets published online by the EPA are served ove
 ** Priority
 Middle Priority. This problem is one that must be solved eventually.
 
-* Developing Guidelines for Storage, Serveer Space, Mirroring, etc. 
+* Developing Guidelines for Storage, Server Space, Mirroring, etc. 
 We have received many offers of server space donations, and many suggestions about the appropriate way to store this data (e.g., different protocols, mirroring strategies, etc.).  Meanwhile, a number of independent parties are setting up their own archives and mirrors of datasets. As a distributed network of volunteers, we need to figure out ways to make these archives robust, accessible, and durable. This is a hard problem!
 
 It is unlikely that U of T will take a leadership role in the actual archiving of data, so our role at this event is to make some first steps in identifying best practices for this part of the project. If anyone has substantial skills in this area the librarian team could use your help developing some guidelines and standards for our data storage serving, mirroring, and archiving practices, and for developing webs of trust in a distributed network.   
