@@ -39,7 +39,7 @@ Another, slightly less transparent store of documents is the collection of [[htt
 A third set of documents is actually embedded in a more data-driven interface (so it's sort of a transition to the next category), at the [[https://echo.epa.gov/][Enforcement and Compliance History]] repository.  What would it take to recover this data? 
 
 **** Tools
-We've been looking at [[https://scrapy.org/][Scrapy]] and its GUI builder, [[https://scrapy.org/][Portia]], as building blocks for our scraping efforts. However, we haven't settled either on a format for any metadata we can collect nor a good way to ingetrate it directly with the Internet Archive's broader webcrawling project.  
+We've been looking at [[https://scrapy.org/][Scrapy]] and its GUI builder, [[https://scrapinghub.com/portia/][Portia]], as building blocks for our scraping efforts. However, we haven't settled either on a format for any metadata we can collect nor a good way to ingetrate it directly with the Internet Archive's broader webcrawling project.  
 
 *** Quantitative Datasets: Finding, filtering, Downloading, and Archiving Them
 the EPA hosts many datasets large and small. A good number of them are online at [[https://www3.epa.gov/enviro/][Envirofacts]]. Infoormation about Envirofacts and other API's is also [[https://www3.epa.gov/enviro/][available online]].  Many of these  datasets can also be [[http://gis.epa.ie/GetData/Download][Downloaded from EPA]], but the download links are sent via email.  It should be possible to automate this process using a combination of a scraper and a mail API like [[https://www.mailgun.com/][Mailgun]] or [[https://sendgrid.com/][Sendgrid]].  The question of short term storage (for acquisition), and especially of *long-term archiving*, remains unsolved.  
