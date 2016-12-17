@@ -24,7 +24,7 @@ For now, we see our objectives as the following:
 - *developing recipes* for reverse-engineering URL's of database-stored documents, and potentially *adding metadata* to archived PDF files located in this way
 - *locating* non-document-centric datasets (that is, databases collecting large sets of quantitative data instead of texts), *assessing* whether they are in danger of disappearing, and *developing methods* to retrieve and archive the information
 
-So there are three categories of preserveation work here; let's discuss them in turn. 
+So there are three categories of preservation work here; let's discuss them in turn. 
 
 *** Deep Web Pages: Nominating Seeds
 
