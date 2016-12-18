@@ -16,7 +16,11 @@ The IA uses [[http://crawler.archive.org/index.html][Heretrix]] for its crawl, b
 
 One simple solution seems to be [[https://github.com/odie5533/WarcMiddleware][WARC Middleware]], which can accept a list of URL's in a file.  As I understand it Scrapy obeys robots.txt if the variable assignment ~ROBOTSTXT_OBEY = True~ is included in the file.
 
+Another suggestion we've gotten is [[https://github.com/ludios/grab-site][grab-site]], which came to us via the maintainers of [[https://webrecorder.io/][webrecorder]].  
+
 You can learn more about the WARC here:
 - [[http://www.archiveteam.org/index.php?title=The_WARC_Ecosystem][WARC Ecosystem]]
 - [[https://www.taricorp.net/2016/web-history-warc/][collecting browsing history]]
 - [[https://github.com/dhamaniasad/WARCTools][List of WARC tools]]
+* Server Architecture
+We have an offer of help from the maintainer of [[https://github.com/ipfs/ipfs][IPFS]]. [[https://github.com/ipfs/community/blob/master/articles/endangered-data.md][Here's some background on the protocol]]. 

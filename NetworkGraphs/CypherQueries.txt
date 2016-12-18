@@ -1,0 +1,54 @@
+
+------------------------------------------------------------------------------------------------------------------------
+
+Guerilla Archiving / Dec 17, 2016 - UofT / 
+Stefan.Ianta@tcp1p.net,
+Shabscan@gmail.com,
+Brendan O'Brien, brendan@qri.io,
+Zaki Patel zhpatel@gmail.com,
+Tristan Himmelman tristanhimmelman@gmail.com
+
+_______________
+
+LOAD CSV WITH HEADERS FROM 'http://localhost:8080/data/Programs.csv' AS line
+CREATE (:Program { 
+                ProgramName: line[0], 
+                Agency: line[1],
+                URL: line[2],
+                Format: line[3],
+                DatasetURL: line[4],
+                Comments: line[5]
+                })
+                
+LOAD CSV WITH HEADERS FROM 'http://localhost:8080/data/  .csv' AS line
+CREATE (:?Label? { 
+                Name: line[0], 
+                : line[1],
+                : line[2],
+                : line[3],
+                : line[4],
+                : line[5]
+                })
+
+LOAD CSV WITH HEADERS FROM 'http://localhost:8080/data/  .csv' AS line
+CREATE (:?Label? { 
+                Name: line[0], 
+                : line[1],
+                : line[2],
+                : line[3],
+                : line[4],
+                : line[5]
+                })
+
+LOAD CSV WITH HEADERS FROM 'http://localhost:8080/data/  .csv' AS line
+CREATE (:?Label? { 
+                Name: line[0], 
+                : line[1],
+                : line[2],
+                : line[3],
+                : line[4],
+                : line[5]
+                })
+
+
+------------------------------------------------------------------------------------------------------------------------
