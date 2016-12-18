@@ -12,7 +12,7 @@ a. Site-map of EPA
 b. CSV data found 
 
 The tool is intended to take as input the various lists that other folks in the Guerilla Archiving Event and provide a common visual point for future events to start exploring and analyzing EPA data sets.
-
+![doodle](./doodle.jpg)
 
 Goals
 
