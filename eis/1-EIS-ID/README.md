@@ -48,3 +48,7 @@ Tidy things up by doing this:
     head -1 eis-listing.csv > tmp.csv
     grep -v eis_id eis-listing.csv | sort -rn | uniq >> tmp.csv
 	mv tmp.csv eis-listing.csv
+
+# License
+
+GPL v3.  See LICENSE for details.
