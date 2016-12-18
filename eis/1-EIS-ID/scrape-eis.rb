@@ -1,26 +1,35 @@
 #!/usr/bin/env ruby
 
-require 'csv'
-require 'nokogiri'
-require 'open-uri'
+require "csv"
+require "nokogiri"
+require "open-uri"
 
-# "14,633 items found, displaying 1 to 20"
+# Note: annoying jsessionid field is required or you will just
+# get the same 20 results because the paging isn't happening.
+# Go to
+# https://cdxnodengn.epa.gov/cdx-enepa-public/action/eis/search
+# and do an empty search, and the URL of the results page
+# will have a jsessionid field. Paste it in below.
 
-big_listing_url = "https://cdxnodengn.epa.gov/cdx-enepa-II/public/action/eis/search/search?searchCriteria.endCommentLetterDate=&d-446779-p=::PAGE::&searchCriteria.title=&searchRecords=Search&searchCritera.primaryStates=&searchCriteria.endFRDate=&searchCriteria.startCommentLetterDate=&searchCriteria.startFRDate="
+results_page_url = "https://cdxnodengn.epa.gov/" \
+                   "cdx-enepa-II/public/action/eis/search/search" \
+                   ";jsessionid=::JSESSIONID::?d-446779-p=::PAGE::"
 
-# Note: annoying jsessionid field.
-# Go to the site in your browser and get one that will work.
+jsessionid = "161419A50BD99AC9A7D90C19ADE84559"
 
-big_listing_url = "https://cdxnodengn.epa.gov/cdx-enepa-II/public/action/eis/search/search;jsessionid=63556864DEA845D23EAD8DAACF5DDA1A?d-446779-p=::PAGE::"
+results_page_url.gsub!("::JSESSIONID::", jsessionid)
 
 puts %w(eis_id title document epa_comment_letter_date federal_register_date agency state).to_csv
 
-page = 1 # 14633 / 20 = 731, so go up to 732
-page_end = 733 # 733 # Could go by hundreds if you want
+# "14,633 items found, displaying 1 to 20"
+# # 14633 / 20 = 731, so go up to 732
+
+page = 1
+page_end = 733
 
 while page <= page_end
   warn page
-  results_page = big_listing_url.gsub("::PAGE::", page.to_s)
+  results_page = results_page_url.gsub("::PAGE::", page.to_s)
   # warn results_page
   begin
     open(results_page) do |f|
@@ -36,7 +45,8 @@ while page <= page_end
             federal_register_date = row.xpath("td")[3].text
             agency = row.xpath("td")[4].text
             state = row.xpath("td")[5].text
-            puts [eis_id, title, document, epa_comment_letter_date, federal_register_date, agency, state].to_csv
+            puts [eis_id, title, document, epa_comment_letter_date,
+                  federal_register_date, agency, state].to_csv
           end
         rescue StandardError => e
           warn "Error parsing row: #{e}"
@@ -44,11 +54,10 @@ while page <= page_end
       else
         warn "Cannot load spreadsheet: #{f.status}"
       end
-      # f.close
     end
   rescue StandardError => open_error
     warn "ERROR on #{page}: #{open_error}"
   end
   page += 1
-  sleep 0 # 1 # Be nice
+  # sleep 1 # If you want to be nice, but it's slow as it is.
 end
