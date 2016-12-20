@@ -7,16 +7,16 @@ We've been collaborating via [[http://www.slack.com][Slack]] and [[http://github
 
 The EOT project has a simple bookmarklet for nominating "seeds" for their webcrawler; you can [[http://digital2.library.unt.edu/nomination/eth2016/about/][read about it here]]. For our event we derived a [[https://github.com/CivicTechTO/presidential-harvest-nomination-tool][Chrome Extension]], and would recommend its use to future groups.
 * Scrapers
-We expectto use [[https://scrapy.org/][the scrapy Python library]] and maybe its GUI companion [[https://scrapinghub.com/portia/][portia]] for this work.
+We expect to use [[https://scrapy.org/][the scrapy Python library]] and maybe its GUI companion [[https://scrapinghub.com/portia/][portia]] for this work.
 * Crawlers
 :PROPERTIES:
 :CUSTOM_ID: crawlers
 :END:
-The IA uses [[http://crawler.archive.org/index.html][Heritrix]] for its crawl, but it is a little finicky to set up and somewhat complex to learn to use, so we are not using it at our event.  Instead, we will have to code our own.  THere are basically two technical specifications:
+The IA uses [[http://crawler.archive.org/index.html][Heritrix]] for its crawl, but it is a little finicky to set up and somewhat complex to learn to use, so we are not using it at our event.  Instead, we will have to code our own.  There are basically two technical specifications:
 - any tool we use should respect robots.txt
 - Any archives we produce should be in WARC format, the ISO standard for web archives used by the Internet Archive.  
 
-One simple solution seems to be [[https://github.com/odie5533/WarcMiddleware][WARC Middleware]], which can accept a list of URL's in a file.  As I understand it Scrapy obeys robots.txt if the variable assignment ~ROBOTSTXT_OBEY = True~ is included in the file.
+One simple solution seems to be [[https://github.com/odie5533/WarcMiddleware][WARC Middleware]], which can accept a list of URLs in a file.  As I understand it Scrapy obeys robots.txt if the variable assignment ~ROBOTSTXT_OBEY = True~ is included in the file.
 
 Another suggestion we've gotten is [[https://github.com/ludios/grab-site][grab-site]], which came to us via the maintainers of [[https://webrecorder.io/][webrecorder]].  
 
