@@ -12,7 +12,7 @@ We expectto use [[https://scrapy.org/][the scrapy Python library]] and maybe its
 :PROPERTIES:
 :CUSTOM_ID: crawlers
 :END:
-The IA uses [[http://crawler.archive.org/index.html][Heretrix]] for its crawl, but it is a little finicky to set up and somewhat complex to learn to use, so we are not using it at our event.  Instead, we will have to code our own.  THere are basically two technical specifications:
+The IA uses [[http://crawler.archive.org/index.html][Heritrix]] for its crawl, but it is a little finicky to set up and somewhat complex to learn to use, so we are not using it at our event.  Instead, we will have to code our own.  THere are basically two technical specifications:
 - any tool we use should respect robots.txt
 - Any archives we produce should be in WARC format, the ISO standard for web archives used by the Internet Archive.  
 
