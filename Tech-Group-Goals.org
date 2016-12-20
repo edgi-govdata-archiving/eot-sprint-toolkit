@@ -90,8 +90,8 @@ Moderate, and if expertise is presence this should probably be the highest prior
 The retrieval and storage of quantitative datasets is a complex problem, and currently in flux. The IA is hoping to get direct access to DB dumps or even possibly VM clones for the web interfaces to the currently-available datasets, but *no concrete arrangements have been achieved* and *there is currently no guarantee* that their efforts will be successful.  
 
 We therefore need to answer a number of very urgent questions:
-- How do we assess the priority of particular datasets, and target the highest-priority deatasets first?
-- What mechanisms are available for dataset capture (e.g., reverse-engineering via web interfaces, partial downloads, and glue code; or, alternatively, walking into an EPA offie and requesting digital copies of the whole thing)?  What are the risks and benefits of each?
+- How do we assess the priority of particular datasets, and target the highest-priority datasets first?
+- What mechanisms are available for dataset capture (e.g., reverse-engineering via web interfaces, partial downloads, and glue code; or, alternatively, walking into an EPA office and requesting digital copies of the whole thing)?  What are the risks and benefits of each?
 - What kind of metadata needs to be associated with each DB we retrieve (e.g., timestamps, provenance, etc.)?
 
 These are complex questions which we will not resolve in our event.  However, we would like to make some progress
@@ -101,4 +101,4 @@ These are complex questions which we will not resolve in our event.  However, we
 - *Code:* If possible, we would like to test-run a database retrieval and identify low-hanging fruit as well as potential difficulties.  We would choose a dataset from the [[https://edg.epa.gov/metadata/catalog/search/browse/browse.page][EPA Dataset Gateway]] or a particular dataset identified as high priority.
 
 ** Priority
-Developmeent of the protocols and stnadards is a *high* priority. Test-driving code is more of a *wishlist*.
+Development of the protocols and standards is a *high* priority. Test-driving code is more of a *wishlist*.
