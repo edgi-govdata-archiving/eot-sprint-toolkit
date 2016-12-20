@@ -1,0 +1,48 @@
+#+OPTIONS: ':t *:t -:t ::t <:t H:3 \n:nil ^:{} arch:headline author:t
+#+OPTIONS: broken-links:nil c:nil creator:nil d:(not "LOGBOOK")
+#+OPTIONS: date:t e:t email:nil f:t inline:t num:nil p:nil pri:nil
+#+OPTIONS: prop:nil stat:t tags:t tasks:t tex:t timestamp:t title:t
+#+OPTIONS: toc:nil todo:t |:t
+#+TITLE: Understanding What Heretrix Does
+#+DATE: <2016-12-20 Tue>
+#+AUTHOR: Matt Price
+#+EMAIL: matt.price@utoronto.ca
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+#+EXCLUDE_TAGS: noexport
+#+CREATOR: Emacs 26.0.50.1 (Org mode 9.0.1)
+
+Our nomination tool asks the Internet Archive webcrawler, [[https://github.com/internetarchive/heritrix3][Heretrix]], to start deeper crawls from URL's that are buried 2-3 clicks down in a website's link hierarchy.  In this document we explain a little bit about what Heretrix can do, why it needs our help, and also how to identify documents and datasets that Heretrix *can't* reach.  
+
+* How a webcrawler works
+A webcrawler like Heretrix reads web pages and searches for links.  When it finds a link, it follows it to a new page, where it once again searches for links, and then follows those, and so on, and so on...  As you can imagine, this rapidly leads to a *very* large number of links!  the Internet Archive therefore imposes limits on Heretrix: after a certain number of "hops", it will stop collecting links and move on to the next "seed" in its list.  This allows it to cover a lot of "territory" -- moving relatively rapidly through the huge ~.gov~ domain -- but it means that there are "hidden depths" which it doesn't see.  
+
+When we nominate seeds, we draw Heretrix's attention to some of this "deep web" -- identifying it as especially important, and worth crawling.  This is important work, and we're grateful for the volunteers that help us to do it.
+
+* What Heretrix can and can't get
+Heretrix is a clever program, but it runs in a "command-line" environment, and is fully automated. That means that there are certain things it can't do. On the other hand, what it can do, it odes very well.  
+
+Heretrix can:
+- browse any "http://" or "https://" link that it finds.  This includes zip files, excel files, pdfs, etc. - -as long as the link you see is *really* a link to the file, and not an "obfuscated" link that instead points to a page that includes a complex environment (see below).
+
+But here are some things that Heretrix can't do:
+- it can't click "Go!" or "Submit" on a web form -- so search forms tend to stop it pretty much dead in its tracks, unless there's a "browse" link also that links to the full list of searchable resources
+- It doesn't have a sophisticated browser environment that can do computing work for it.  Many sophisticated webpages ask the browser to do a lot of computational work.  Heretrix can't do that very well.
+- It also can't follow links that don't use the "http protocol".  This mostly affects resources that aren't designed for direct browsing.  There are at least two important sub-categories here:
+  - *FTP links:* the "File transfer protocol" predates the Web, and government agencies still use FTP for many static resources, like zipfiles of quantitative datasets.  Heretrix just doesn't Have a way to deal with these resources so will *never* capture them.
+  - *Complicated Databases:* Many of the most important resources on government websites use maps or other fancy interfaces to display government data in a user-friendly form. In order to get that data, the webpage has to request it from a database.  Those requests don't go over http, and they also usually aren't visible to the browser at all. So if the database goes offline, the fancy interface will be useless.  The Internet Archive will still have a copy of the web page, but it will just display an empty box in the middle where the fancy map is supposed to be.  
+
+So one important task you can help with, is identifying these un-crawlable database interfaces and alerting us (the project, not the webcrawler) to their location.  Once we know about them, we can try to "reverse engineer" the interface -- look for clues that identify the underlying data, and try to preserve it somehow, either by coding tricks, or through some other preservation avenue (such as an FOIA request or a manual download at a government library).
+
+* How to Nominate Seeds
+For today's archiv-a-thon, we are using *[edit this to say either the nomination tool, or a chrome extension, or something else.]*. *Then add some more detailed instructions about how to use it.*
+
+* When you find un-crawlable resources
+This is an important job! When you find these, please:
+- add them to this spreadsheet *[add link]*
+- let the coding group know what you've found, so they can add it to their task queue
+
+
+
+
+* 
