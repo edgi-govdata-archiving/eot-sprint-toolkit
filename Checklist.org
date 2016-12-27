@@ -1,4 +1,4 @@
-#+TITLE: Pre-Event Checklist
+#+TITLE: Pre-Event Tech Group Checklist
 
 Before [[http://www.bbc.com/news/world-us-canada-38324045][our first event]], we did some things well and some things less well.  This document is an attempt to transmit what we learned both from our successes and our challenges.
 
@@ -36,3 +36,4 @@ One of our main goals was to build scrapers/harversters for specific datasets th
 - [ ] Check in with the EDGI tech team for advice
 
 (The org-mode source of this document is [[https://github.com/edgi-govdata-archiving/eot-sprint-toolkit/blob/master/Checklist.org][available on Github]])
+
